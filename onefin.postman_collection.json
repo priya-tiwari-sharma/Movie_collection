@@ -1,0 +1,971 @@
+{
+	"info": {
+		"_postman_id": "2981c9a6-b577-42de-b232-9959a549c82c",
+		"name": "onefin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16557530",
+		"_collection_link": "https://red-shadow-30342.postman.co/workspace/NeuralWave~d4295cb7-ae4b-4f33-8ea1-ab7e9f52f9a6/collection/16557530-2981c9a6-b577-42de-b232-9959a549c82c?action=share&source=collection_link&creator=16557530"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"viniiv\", \"password\": \"testpassword\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/register/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/register/",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\": \"testuser\", \"password\": \"testpassword\"}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/register/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 26 Jul 2024 19:35:34 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.12"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "247"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIyMDIyODM0LCJpYXQiOjE3MjIwMjI1MzQsImp0aSI6IjdhOGM0YjIyNjg5OTRkM2I4MGY3MTIwZDI4NzIzNTVlIiwidXNlcl9pZCI6Mn0.TP_BdIwRjEEfD3IBkd2Ow9WF4rOJmT5MF1sHMyN5XW8\"\n}"
+				}
+			]
+		},
+		{
+			"name": "movies",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIyNzc4MjczLCJpYXQiOjE3MjIxNzM0NzMsImp0aSI6ImJiYzcxMTRkMjc3ODQxYTNhYmJjZDU4OGYwZGNlOTIwIiwidXNlcl9pZCI6MTF9.yeDwTqFoF-hbiruU178BXIcxFBzEd_He_nZ_nhikZxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <access_token>"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/movies/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movies",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "movies",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <access_token>"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/movies/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jul 2024 14:32:38 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.12"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "3713"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 45466,\n    \"next\": \"https://demo.credy.in/api/v1/maya/movies/?page=2\",\n    \"previous\": null,\n    \"results\": [\n        {\n            \"title\": \"Queerama\",\n            \"description\": \"50 years after decriminalisation of homosexuality in the UK, director Daisy Asquith mines the jewels of the BFI archive to take us into the relationships, desires, fears and expressions of gay men and women in the 20th century.\",\n            \"genres\": \"\",\n            \"uuid\": \"57baf4f4-c9ef-4197-9e4f-acf04eae5b4d\"\n        },\n        {\n            \"title\": \"Satana likuyushchiy\",\n            \"description\": \"In a small town live two brothers, one a minister and the other one a hunchback painter of the chapel who lives with his wife. One dreadful and stormy night, a stranger knocks at the door asking for shelter. The stranger talks about all the good things of the earthly life the minister is missing because of his puritanical faith. The minister comes to accept the stranger's viewpoint but it is others who will pay the consequences because the minister will discover the human pleasures thanks to, ehem, his sister- in -law… The tormented minister and his cuckolded brother will die in a strange accident in the chapel and later an infant will be born from the minister's adulterous relationship.\",\n            \"genres\": \"\",\n            \"uuid\": \"163ce013-03e2-47e9-8afd-e7de7688c151\"\n        },\n        {\n            \"title\": \"Betrayal\",\n            \"description\": \"When one of her hits goes wrong, a professional assassin ends up with a suitcase full of a million dollars belonging to a mob boss ...\",\n            \"genres\": \"Action,Drama,Thriller\",\n            \"uuid\": \"720e8796-5397-4e81-9bd7-763789463707\"\n        },\n        {\n            \"title\": \"Siglo ng Pagluluwal\",\n            \"description\": \"An artist struggles to finish his work while a storyline about a cult plays in his head.\",\n            \"genres\": \"Drama\",\n            \"uuid\": \"e9548ee7-6a95-4917-893e-1fa1d3a6de40\"\n        },\n        {\n            \"title\": \"رگ خواب\",\n            \"description\": \"Rising and falling between a man and woman.\",\n            \"genres\": \"Drama,Family\",\n            \"uuid\": \"9b0a4aa2-9ec7-4a3d-98ab-622275f44ea5\"\n        },\n        {\n            \"title\": \"Robin Hood\",\n            \"description\": \"Yet another version of the classic epic, with enough variation to make it interesting. The story is the same, but some of the characters are quite different from the usual, in particular Uma Thurman's very special maid Marian. The photography is also great, giving the story a somewhat darker tone.\",\n            \"genres\": \"Drama,Action,Romance\",\n            \"uuid\": \"73399935-2165-41f0-a6a4-1336ef5e5c20\"\n        },\n        {\n            \"title\": \"Caged Heat 3000\",\n            \"description\": \"It's the year 3000 AD. The world's most dangerous women are banished to a remote asteroid 45 million light years from earth. Kira Murphy doesn't belong; wrongfully accused of a crime she did not commit, she's thrown in this interplanetary prison and left to her own defenses. But Kira's a fighter, and soon she finds herself in the middle of a female gang war; where everyone wants a piece of the action... and a piece of her! \\\"Caged Heat 3000\\\" takes the Women-in-Prison genre to a whole new level... and a whole new galaxy!\",\n            \"genres\": \"Science Fiction\",\n            \"uuid\": \"129cf5d9-827c-4e42-843e-1f87ef99452f\"\n        },\n        {\n            \"title\": \"The Burkittsville 7\",\n            \"description\": \"A film archivist revisits the story of Rustin Parr, a hermit thought to have murdered seven children while under the possession of the Blair Witch.\",\n            \"genres\": \"Horror\",\n            \"uuid\": \"5e904ce8-91b7-42b4-84d9-5b53f4cb8c74\"\n        },\n        {\n            \"title\": \"Shadow of the Blair Witch\",\n            \"description\": \"In this true-crime documentary, we delve into the murder spree that was the inspiration for Joe Berlinger's \\\"Book of Shadows: Blair Witch 2\\\".\",\n            \"genres\": \"Mystery,Horror\",\n            \"uuid\": \"bcacfa33-a886-4ecb-a62a-6bbcb9d9509d\"\n        },\n        {\n            \"title\": \"House of Horrors\",\n            \"description\": \"An unsuccessful sculptor saves a madman named \\\"The Creeper\\\" from drowning. Seeing an opportunity for revenge, he tricks the psycho into murdering his critics.\",\n            \"genres\": \"Horror,Mystery,Thriller\",\n            \"uuid\": \"388c99da-0cba-4ff0-a528-faea153b43c3\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "collection",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIyNzc4MjczLCJpYXQiOjE3MjIxNzM0NzMsImp0aSI6ImJiYzcxMTRkMjc3ODQxYTNhYmJjZDU4OGYwZGNlOTIwIiwidXNlcl9pZCI6MTF9.yeDwTqFoF-hbiruU178BXIcxFBzEd_He_nZ_nhikZxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <access_token>"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Blockbusters\"\n\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/collection/5cd40b2d-ae32-43e6-84ba-77b0ab17b143/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"collection",
+						"5cd40b2d-ae32-43e6-84ba-77b0ab17b143",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/collection/",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <access_token>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/collection/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"collection",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 26 Jul 2024 20:02:02 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.12"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1445"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"title\": \"Bollywood Blockbusters\",\n        \"description\": \"A collection of some of the most iconic and popular Bollywood movies that have captivated audiences with their music, drama, and grandeur.\",\n        \"movies\": [\n            {\n                \"title\": \"Dilwale Dulhania Le Jayenge\",\n                \"description\": \"A timeless love story of Raj and Simran, who meet on a European vacation and must overcome family obstacles to be together.\",\n                \"genres\": \"Romance, Drama\",\n                \"uuid\": \"1a2b3c4d-5678-9e01-2345-6789abcdef01\"\n            },\n            {\n                \"title\": \"Sholay\",\n                \"description\": \"A classic tale of friendship and revenge, where two ex-convicts are hired by a retired police officer to capture a notorious bandit.\",\n                \"genres\": \"Action, Drama\",\n                \"uuid\": \"2b3c4d5e-6789-0f12-3456-7890abcdef02\"\n            },\n            {\n                \"title\": \"Kabhi Khushi Kabhie Gham\",\n                \"description\": \"A family drama that explores the complexities of relationships and the bond between parents and children across generations.\",\n                \"genres\": \"Drama, Family\",\n                \"uuid\": \"3c4d5e6f-7890-1f23-4567-890abcdef03\"\n            },\n            {\n                \"title\": \"3 Idiots\",\n                \"description\": \"A heartwarming and humorous story of three friends navigating the pressures of engineering college, while learning about life and success.\",\n                \"genres\": \"Comedy, Drama\",\n                \"uuid\": \"4d5e6f70-8901-2f34-5678-90abcdef04\"\n            },\n            {\n                \"title\": \"Dangal\",\n                \"description\": \"Based on a true story, this film follows a former wrestler who trains his daughters to become world-class wrestlers, challenging societal norms.\",\n                \"genres\": \"Biography, Drama, Sports\",\n                \"uuid\": \"5e6f7081-9012-3f45-6789-0abcdef05\"\n            }\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "collection",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIyMDI0MzM1LCJpYXQiOjE3MjIwMjQwMzUsImp0aSI6ImVhNzE5ZDg3ZDRmMDQ4M2RiZThmN2FkOTg1OTIyNjYxIiwidXNlcl9pZCI6N30.r1q0IrsE7ajTwqqAfLPgTdDxW8tjAzXhZQZNMO0Ah-o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <access_token>"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Bollywood Blockbusters\",\n    \"description\": \"A collection of some of the most iconic and popular Bollywood movies that have captivated audiences with their music, drama, and grandeur.\",\n    \"movies\": [\n        {\n            \"title\": \"Dilwale Dulhania Le Jayenge\",\n            \"description\": \"A timeless love story of Raj and Simran, who meet on a European vacation and must overcome family obstacles to be together.\",\n            \"genres\": \"Romance, Drama\",\n            \"uuid\": \"1a2b3c4d-5678-9e01-2345-6789abcdef01\"\n        },\n        {\n            \"title\": \"Sholay\",\n            \"description\": \"A classic tale of friendship and revenge, where two ex-convicts are hired by a retired police officer to capture a notorious bandit.\",\n            \"genres\": \"Action, Drama\",\n            \"uuid\": \"2b3c4d5e-6789-0f12-3456-7890abcdef02\"\n        },\n        {\n            \"title\": \"Kabhi Khushi Kabhie Gham\",\n            \"description\": \"A family drama that explores the complexities of relationships and the bond between parents and children across generations.\",\n            \"genres\": \"Drama, Family\",\n            \"uuid\": \"3c4d5e6f-7890-1f23-4567-890abcdef03\"\n        },\n        {\n            \"title\": \"3 Idiots\",\n            \"description\": \"A heartwarming and humorous story of three friends navigating the pressures of engineering college, while learning about life and success.\",\n            \"genres\": \"Comedy, Drama\",\n            \"uuid\": \"4d5e6f70-8901-2f34-5678-90abcdef04\"\n        },\n        {\n            \"title\": \"Dangal\",\n            \"description\": \"Based on a true story, this film follows a former wrestler who trains his daughters to become world-class wrestlers, challenging societal norms.\",\n            \"genres\": \"Biography, Drama, Sports\",\n            \"uuid\": \"5e6f7081-9012-3f45-6789-0abcdef05\"\n        }\n    ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/collection/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"collection",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/collection/",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <access_token>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Bollywood Blockbusters\",\n    \"description\": \"A collection of some of the most iconic and popular Bollywood movies that have captivated audiences with their music, drama, and grandeur.\",\n    \"movies\": [\n        {\n            \"title\": \"Dilwale Dulhania Le Jayenge\",\n            \"description\": \"A timeless love story of Raj and Simran, who meet on a European vacation and must overcome family obstacles to be together.\",\n            \"genres\": \"Romance, Drama\",\n            \"uuid\": \"1a2b3c4d-5678-9e01-2345-6789abcdef01\"\n        },\n        {\n            \"title\": \"Sholay\",\n            \"description\": \"A classic tale of friendship and revenge, where two ex-convicts are hired by a retired police officer to capture a notorious bandit.\",\n            \"genres\": \"Action, Drama\",\n            \"uuid\": \"2b3c4d5e-6789-0f12-3456-7890abcdef02\"\n        },\n        {\n            \"title\": \"Kabhi Khushi Kabhie Gham\",\n            \"description\": \"A family drama that explores the complexities of relationships and the bond between parents and children across generations.\",\n            \"genres\": \"Drama, Family\",\n            \"uuid\": \"3c4d5e6f-7890-1f23-4567-890abcdef03\"\n        },\n        {\n            \"title\": \"3 Idiots\",\n            \"description\": \"A heartwarming and humorous story of three friends navigating the pressures of engineering college, while learning about life and success.\",\n            \"genres\": \"Comedy, Drama\",\n            \"uuid\": \"4d5e6f70-8901-2f34-5678-90abcdef04\"\n        },\n        {\n            \"title\": \"Dangal\",\n            \"description\": \"Based on a true story, this film follows a former wrestler who trains his daughters to become world-class wrestlers, challenging societal norms.\",\n            \"genres\": \"Biography, Drama, Sports\",\n            \"uuid\": \"5e6f7081-9012-3f45-6789-0abcdef05\"\n        }\n    ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/collection/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"collection",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 26 Jul 2024 20:00:47 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.12"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "34"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Message\": \"Successfully created\"\n}"
+				}
+			]
+		},
+		{
+			"name": "collection id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIyNzc4MjczLCJpYXQiOjE3MjIxNzM0NzMsImp0aSI6ImJiYzcxMTRkMjc3ODQxYTNhYmJjZDU4OGYwZGNlOTIwIiwidXNlcl9pZCI6MTF9.yeDwTqFoF-hbiruU178BXIcxFBzEd_He_nZ_nhikZxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <access_token>"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/collection/5cd40b2d-ae32-43e6-84ba-77b0ab17b143/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"collection",
+						"5cd40b2d-ae32-43e6-84ba-77b0ab17b143",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/collection/5cd40b2d-ae32-43e6-84ba-77b0ab17b143/",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <access_token>"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/collection/5cd40b2d-ae32-43e6-84ba-77b0ab17b143/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"collection",
+								"5cd40b2d-ae32-43e6-84ba-77b0ab17b143",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jul 2024 13:54:08 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.12"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1489"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"uuid\": \"5cd40b2d-ae32-43e6-84ba-77b0ab17b143\",\n    \"title\": \"Bollywood Blockbusters\",\n    \"description\": \"A collection of some of the most iconic and popular Bollywood movies that have captivated audiences with their music, drama, and grandeur.\",\n    \"movies\": [\n        {\n            \"title\": \"Dilwale Dulhania Le Jayenge\",\n            \"description\": \"A timeless love story of Raj and Simran, who meet on a European vacation and must overcome family obstacles to be together.\",\n            \"genres\": \"Romance, Drama\",\n            \"uuid\": \"1a2b3c4d-5678-9e01-2345-6789abcdef01\"\n        },\n        {\n            \"title\": \"Sholay\",\n            \"description\": \"A classic tale of friendship and revenge, where two ex-convicts are hired by a retired police officer to capture a notorious bandit.\",\n            \"genres\": \"Action, Drama\",\n            \"uuid\": \"2b3c4d5e-6789-0f12-3456-7890abcdef02\"\n        },\n        {\n            \"title\": \"Kabhi Khushi Kabhie Gham\",\n            \"description\": \"A family drama that explores the complexities of relationships and the bond between parents and children across generations.\",\n            \"genres\": \"Drama, Family\",\n            \"uuid\": \"3c4d5e6f-7890-1f23-4567-890abcdef03\"\n        },\n        {\n            \"title\": \"3 Idiots\",\n            \"description\": \"A heartwarming and humorous story of three friends navigating the pressures of engineering college, while learning about life and success.\",\n            \"genres\": \"Comedy, Drama\",\n            \"uuid\": \"4d5e6f70-8901-2f34-5678-90abcdef04\"\n        },\n        {\n            \"title\": \"Dangal\",\n            \"description\": \"Based on a true story, this film follows a former wrestler who trains his daughters to become world-class wrestlers, challenging societal norms.\",\n            \"genres\": \"Biography, Drama, Sports\",\n            \"uuid\": \"5e6f7081-9012-3f45-6789-0abcdef05\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "collection id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIyNzc4MjczLCJpYXQiOjE3MjIxNzM0NzMsImp0aSI6ImJiYzcxMTRkMjc3ODQxYTNhYmJjZDU4OGYwZGNlOTIwIiwidXNlcl9pZCI6MTF9.yeDwTqFoF-hbiruU178BXIcxFBzEd_He_nZ_nhikZxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <access_token>"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"updated_title\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/collection/5cd40b2d-ae32-43e6-84ba-77b0ab17b143/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"collection",
+						"5cd40b2d-ae32-43e6-84ba-77b0ab17b143",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/collection/5cd40b2d-ae32-43e6-84ba-77b0ab17b143/ Copy",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <access_token>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"updated_title\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/collection/5cd40b2d-ae32-43e6-84ba-77b0ab17b143/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"collection",
+								"5cd40b2d-ae32-43e6-84ba-77b0ab17b143",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jul 2024 13:55:44 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.12"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1480"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"uuid\": \"5cd40b2d-ae32-43e6-84ba-77b0ab17b143\",\n    \"title\": \"updated_title\",\n    \"description\": \"A collection of some of the most iconic and popular Bollywood movies that have captivated audiences with their music, drama, and grandeur.\",\n    \"movies\": [\n        {\n            \"title\": \"Dilwale Dulhania Le Jayenge\",\n            \"description\": \"A timeless love story of Raj and Simran, who meet on a European vacation and must overcome family obstacles to be together.\",\n            \"genres\": \"Romance, Drama\",\n            \"uuid\": \"1a2b3c4d-5678-9e01-2345-6789abcdef01\"\n        },\n        {\n            \"title\": \"Sholay\",\n            \"description\": \"A classic tale of friendship and revenge, where two ex-convicts are hired by a retired police officer to capture a notorious bandit.\",\n            \"genres\": \"Action, Drama\",\n            \"uuid\": \"2b3c4d5e-6789-0f12-3456-7890abcdef02\"\n        },\n        {\n            \"title\": \"Kabhi Khushi Kabhie Gham\",\n            \"description\": \"A family drama that explores the complexities of relationships and the bond between parents and children across generations.\",\n            \"genres\": \"Drama, Family\",\n            \"uuid\": \"3c4d5e6f-7890-1f23-4567-890abcdef03\"\n        },\n        {\n            \"title\": \"3 Idiots\",\n            \"description\": \"A heartwarming and humorous story of three friends navigating the pressures of engineering college, while learning about life and success.\",\n            \"genres\": \"Comedy, Drama\",\n            \"uuid\": \"4d5e6f70-8901-2f34-5678-90abcdef04\"\n        },\n        {\n            \"title\": \"Dangal\",\n            \"description\": \"Based on a true story, this film follows a former wrestler who trains his daughters to become world-class wrestlers, challenging societal norms.\",\n            \"genres\": \"Biography, Drama, Sports\",\n            \"uuid\": \"5e6f7081-9012-3f45-6789-0abcdef05\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "collection id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIyNzc4MjczLCJpYXQiOjE3MjIxNzM0NzMsImp0aSI6ImJiYzcxMTRkMjc3ODQxYTNhYmJjZDU4OGYwZGNlOTIwIiwidXNlcl9pZCI6MTF9.yeDwTqFoF-hbiruU178BXIcxFBzEd_He_nZ_nhikZxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <access_token>"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"updated_title\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/collection/5cd40b2d-ae32-43e6-84ba-77b0ab17b143/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"collection",
+						"5cd40b2d-ae32-43e6-84ba-77b0ab17b143",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/collection/5cd40b2d-ae32-43e6-84ba-77b0ab17b143/ Copy 2",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <access_token>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"updated_title\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/collection/5cd40b2d-ae32-43e6-84ba-77b0ab17b143/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"collection",
+								"5cd40b2d-ae32-43e6-84ba-77b0ab17b143",
+								""
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jul 2024 13:57:02 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.12"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Collection deleted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "request-count",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/request-count/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"request-count",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "request-count",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/request-count/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"request-count",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jul 2024 14:42:06 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.12"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "46"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Request count reset successfully\"\n}"
+				}
+			]
+		}
+	]
+}
